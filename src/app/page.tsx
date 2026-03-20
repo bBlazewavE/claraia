@@ -49,19 +49,8 @@ const differentiators = [
 
 const testimonials = [
   {
-    quote: "A ClaraIA transformou nosso atendimento ao cliente. O chatbot que desenvolveram reduziu nosso tempo de resposta em 70%.",
-    name: "Marina Silva",
-    role: "Diretora de Operações, TechBR",
-  },
-  {
-    quote: "Finalmente encontramos uma consultoria que fala a nossa língua — tanto no português quanto na tecnologia.",
-    name: "Carlos Oliveira",
-    role: "CEO, Inova Logística",
-  },
-  {
-    quote: "A integração de IA nos nossos processos internos economizou mais de 200 horas por mês da nossa equipe.",
-    name: "Ana Beatriz Costa",
-    role: "CTO, FinanceiroPlus",
+    quote: "A ClaraIA nos ajudou a integrar inteligência artificial nos nossos processos internos de forma prática e eficiente. O resultado superou as expectativas.",
+    company: "STRATUM LTDA",
   },
 ];
 
@@ -153,23 +142,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-primary-900 text-white">
+      {/* Testimonials - Carousel */}
+      <section className="py-20 bg-primary-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               O Que Nossos Clientes Dizem
             </h2>
+            <p className="text-gray-400 text-center mb-16">Empresas que confiam na ClaraIA</p>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
               <AnimateOnScroll key={i}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                  <p className="text-gray-200 mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
-                  <div>
-                    <p className="font-semibold">{t.name}</p>
-                    <p className="text-gray-400 text-sm">{t.role}</p>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 md:p-12 border border-white/10 text-center">
+                  <span className="text-accent text-6xl leading-none block mb-6">&ldquo;</span>
+                  <p className="text-gray-200 text-lg md:text-xl mb-8 italic leading-relaxed">
+                    {t.quote}
+                  </p>
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
+                      <span className="text-accent font-bold text-sm">{t.company[0]}</span>
+                    </div>
+                    <p className="font-semibold text-gray-300">{t.company}</p>
                   </div>
                 </div>
               </AnimateOnScroll>
