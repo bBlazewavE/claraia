@@ -3,6 +3,7 @@ export const post = {
   title: "Como a Inteligência Artificial Reduz Custos Operacionais na Prática",
   description: "Veja exemplos reais de como empresas estão usando IA para cortar custos operacionais sem sacrificar qualidade.",
   date: "2025-12-05",
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["IA reduzir custos", "inteligência artificial custos operacionais", "automação redução custos", "eficiência operacional IA"],
   content: `

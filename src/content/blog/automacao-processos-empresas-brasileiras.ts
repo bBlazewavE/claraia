@@ -3,6 +3,7 @@ export const post = {
   title: "Automação de Processos para Empresas Brasileiras: Guia Prático",
   description: "Um guia completo sobre automação de processos com IA para empresas no Brasil — do básico ao avançado, com exemplos práticos.",
   date: "2025-11-15",
+  image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["automação processos empresa", "automação Brasil", "RPA inteligência artificial", "automatizar processos empresa"],
   content: `

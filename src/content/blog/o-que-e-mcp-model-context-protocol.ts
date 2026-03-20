@@ -3,6 +3,7 @@ export const post = {
   title: "O Que é MCP (Model Context Protocol) e Por Que Sua Empresa Precisa Saber",
   description: "Entenda o que é o Model Context Protocol (MCP), como ele funciona e por que essa tecnologia pode revolucionar a forma como sua empresa usa inteligência artificial.",
   date: "2026-01-28",
+  image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["MCP", "Model Context Protocol", "o que é MCP", "MCP inteligência artificial", "protocolo contexto modelo"],
   content: `

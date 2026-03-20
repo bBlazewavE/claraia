@@ -50,6 +50,16 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {post.image && (
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-lg"
+          />
+        </div>
+      )}
+
       <article className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none prose-headings:text-primary-900 prose-a:text-accent prose-strong:text-gray-900">

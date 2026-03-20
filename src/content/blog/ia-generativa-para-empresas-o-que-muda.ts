@@ -3,6 +3,7 @@ export const post = {
   title: "IA Generativa Para Empresas: O Que Muda na Prática?",
   description: "Entenda o que é IA generativa, como ela se diferencia da IA tradicional e como sua empresa pode aproveitar essa tecnologia hoje.",
   date: "2026-03-12",
+  image: "https://images.unsplash.com/photo-1655720828018-edd71de80578?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["IA generativa empresas", "ChatGPT para empresas", "IA generativa negócios", "como usar IA generativa"],
   content: `
