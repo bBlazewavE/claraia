@@ -3,7 +3,7 @@ export const post = {
   title: "Como Usar o ChatGPT na Sua Empresa: Guia Prático com Exemplos",
   description: "Um guia direto e prático de como usar o ChatGPT no dia a dia da sua empresa — com prompts prontos para copiar e usar.",
   date: "2026-02-05",
-  image: "https://images.unsplash.com/photo-1684163761883-8a1b3e8e1e1a?w=800&q=80",
+  image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["como usar chatgpt empresa", "chatgpt para negócios", "chatgpt trabalho", "prompts chatgpt empresa", "IA no trabalho"],
   content: `

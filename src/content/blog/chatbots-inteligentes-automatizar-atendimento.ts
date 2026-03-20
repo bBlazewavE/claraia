@@ -3,7 +3,7 @@ export const post = {
   title: "Chatbots Inteligentes: Como Automatizar o Atendimento ao Cliente",
   description: "Aprenda como chatbots inteligentes com IA podem transformar o atendimento ao cliente da sua empresa, reduzindo custos e aumentando a satisfação.",
   date: "2026-01-10",
-  image: "https://images.unsplash.com/photo-1531746790095-e5995fef7b01?w=800&q=80",
+  image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=800&q=80",
   author: "Equipe ClaraIA",
   keywords: ["chatbot inteligente", "automatizar atendimento cliente", "chatbot IA empresa", "atendimento automático WhatsApp"],
   content: `
