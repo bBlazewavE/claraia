@@ -33,7 +33,7 @@ const differentiators = [
   {
     icon: "🎯",
     title: "Expertise Real",
-    desc: "Mais de 8 anos de experiência em engenharia de software, cloud e IA aplicada a negócios reais.",
+    desc: "Engenharia de software, cloud e IA aplicada a negócios reais.",
   },
   {
     icon: "🇧🇷",

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Sobre a ClaraIA",
   description:
-    "Conheça a ClaraIA: consultoria brasileira especializada em Inteligência Artificial, fundada por engenheiros com mais de 8 anos de experiência em software e cloud.",
+    "Conheça a ClaraIA: consultoria brasileira especializada em Inteligência Artificial, focada em soluções práticas e acessíveis para empresas.",
   openGraph: {
     title: "Sobre — ClaraIA",
     description: "Nossa história, missão e por que o Brasil precisa de consultoria local em IA.",
@@ -44,10 +44,8 @@ export default function Sobre() {
                   vendia tecnologia genérica sem entender a realidade local?
                 </p>
                 <p className="text-gray-600 text-lg mb-4">
-                  Fundada por um engenheiro de software com mais de 8 anos de experiência em Python,
-                  infraestrutura cloud e tecnologia de streaming de vídeo em larga escala, a ClaraIA
-                  surgiu com um propósito claro: tornar a inteligência artificial acessível, prática e
-                  relevante para empresas de todos os tamanhos no Brasil.
+                  A ClaraIA surgiu com um propósito claro: tornar a inteligência artificial
+                  acessível, prática e relevante para empresas de todos os tamanhos no Brasil.
                 </p>
                 <p className="text-gray-600 text-lg">
                   Nosso nome diz tudo: <strong>Clara + IA</strong>. Acreditamos que inteligência artificial

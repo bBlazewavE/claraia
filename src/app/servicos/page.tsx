@@ -70,7 +70,7 @@ const services = [
     description: [
       "Antes de implementar qualquer solução de IA, sua infraestrutura precisa estar preparada. De nada adianta ter o melhor modelo de linguagem do mundo se ele roda num servidor que cai toda sexta-feira ou se seus dados estão espalhados em planilhas que ninguém encontra.",
       "Nossa consultoria em arquitetura de software avalia sua infraestrutura atual, identifica gargalos e desenha a solução ideal para o seu momento. Trabalhamos com arquiteturas em nuvem (AWS, GCP, Azure), microsserviços, pipelines de dados e tudo que sua empresa precisa para escalar com confiança.",
-      "Não importa se você está começando do zero ou precisa modernizar um sistema legado. Nosso time tem experiência em projetos de streaming de vídeo em larga escala, infraestrutura cloud de alta disponibilidade e sistemas distribuídos — o tipo de desafio que exige engenharia séria, não gambiarras.",
+      "Não importa se você está começando do zero ou precisa modernizar um sistema legado. Trabalhamos com infraestrutura cloud de alta disponibilidade e sistemas distribuídos — o tipo de desafio que exige engenharia séria, não gambiarras.",
     ],
     benefits: [
       "Análise completa da infraestrutura atual",
