@@ -41,7 +41,7 @@ export default function Contato() {
                 </div>
               ) : (
                 <form
-                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  action="https://formspree.io/f/mlgpvpgv"
                   method="POST"
                   onSubmit={(e) => {
                     e.preventDefault();
