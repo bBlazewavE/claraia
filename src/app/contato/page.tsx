@@ -58,6 +58,8 @@ export default function Contato() {
                   }}
                   className="space-y-6"
                 >
+                  {/* Honeypot - hidden from humans, bots fill it */}
+                  <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                       Nome Completo *
