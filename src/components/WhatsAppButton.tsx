@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/5531999999999?text=Olá! Gostaria de saber mais sobre os serviços da ClaraIA."
+      href="https://wa.me/5537984149509?text=Olá! Gostaria de saber mais sobre os serviços da ClaraIA."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco pelo WhatsApp"

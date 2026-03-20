@@ -148,6 +148,17 @@ export default function Contato() {
                   <h2 className="text-2xl font-bold text-primary-900 mb-4">Outras Formas de Contato</h2>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                        <span className="text-2xl">📱</span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900">WhatsApp</p>
+                        <a href="https://wa.me/5537984149509" className="text-accent hover:underline">
+                          +55 (37) 98414-9509
+                        </a>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                         <span className="text-2xl">✉️</span>
                       </div>

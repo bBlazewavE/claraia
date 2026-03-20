@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-// WhatsApp button disabled until new number is purchased
+import WhatsAppButton from "@/components/WhatsAppButton";
 import SchemaOrg from "@/components/SchemaOrg";
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-16">{children}</main>
         <Footer />
-        {/* <WhatsAppButton /> */}
+        <WhatsAppButton />
       </body>
     </html>
   );

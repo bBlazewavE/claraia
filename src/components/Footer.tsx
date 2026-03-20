@@ -41,6 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-gray-300">
+              <li>+55 (37) 98414-9509</li>
               <li>contato@claraialoja.com.br</li>
               {/* CNPJ: add when registered */}
             </ul>
