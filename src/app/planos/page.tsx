@@ -1,13 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const plans = [
   {
     name: "Starter",
-    price: "R$ 497",
-    period: "/mês",
+    monthlyPrice: 497,
+    yearlyPrice: 397,
     description: "Para pequenas empresas que querem começar com IA",
     highlight: false,
     features: [
@@ -19,50 +20,40 @@ const plans = [
       "Suporte por e-mail",
       "Setup incluso",
     ],
-    notIncluded: [
-      "Integração com CRM/ERP",
-      "Múltiplos fluxos",
-      "IA on-premise",
-    ],
     cta: "Começar Agora",
     ctaLink: "https://wa.me/5537984149509?text=Olá! Tenho interesse no plano Starter.",
   },
   {
     name: "Profissional",
-    price: "R$ 1.497",
-    period: "/mês",
+    monthlyPrice: 1497,
+    yearlyPrice: 1197,
     description: "Para empresas que precisam de automação completa",
     highlight: true,
     badge: "Mais Popular",
     features: [
-      "Tudo do plano Starter",
+      "Tudo do Starter, mais:",
       "Conversas ilimitadas",
       "Múltiplos fluxos de atendimento",
       "Integração com agenda/CRM",
       "Chatbot treinado nos seus dados",
-      "Painel de métricas avançado",
       "Qualificação automática de leads",
-      "Suporte prioritário (WhatsApp)",
       "Relatórios mensais",
-    ],
-    notIncluded: [
-      "IA on-premise",
+      "Suporte prioritário (WhatsApp)",
     ],
     cta: "Falar com Consultor",
     ctaLink: "https://wa.me/5537984149509?text=Olá! Tenho interesse no plano Profissional.",
   },
   {
     name: "Enterprise",
-    price: "Sob consulta",
-    period: "",
-    description: "Para empresas que exigem privacidade total de dados",
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    description: "IA na sua infraestrutura. Seus dados nunca saem da empresa.",
     highlight: false,
-    badge: "Máxima Segurança",
+    badge: "Máxima Privacidade",
     features: [
-      "Tudo do plano Profissional",
-      "IA instalada na sua infraestrutura",
-      "Seus dados nunca saem da empresa",
-      "Conformidade total com LGPD",
+      "Tudo do Profissional, mais:",
+      "IA instalada nos seus servidores",
+      "Dados 100% privados (LGPD)",
       "Modelos de IA dedicados",
       "Integrações customizadas ilimitadas",
       "Treinamento da equipe incluso",
@@ -70,7 +61,6 @@ const plans = [
       "Gerente de conta dedicado",
       "Suporte 24/7",
     ],
-    notIncluded: [],
     cta: "Solicitar Proposta",
     ctaLink: "https://wa.me/5537984149509?text=Olá! Tenho interesse no plano Enterprise com IA on-premise.",
   },
@@ -91,7 +81,7 @@ const faqs = [
   },
   {
     q: "Posso trocar de plano depois?",
-    a: "Sim! Você pode fazer upgrade ou downgrade a qualquer momento. A mudança entra em vigor no próximo ciclo de cobrança.",
+    a: "Sim! Você pode fazer upgrade ou downgrade a qualquer momento.",
   },
   {
     q: "Como funciona o chatbot no WhatsApp?",
@@ -99,140 +89,205 @@ const faqs = [
   },
   {
     q: "Meus dados ficam seguros?",
-    a: "Sim. Nos planos Starter e Profissional, usamos provedores de IA com certificações de segurança. No plano Enterprise, a IA roda 100% na sua infraestrutura.",
+    a: "Sim. Nos planos Starter e Profissional, usamos provedores com certificações de segurança. No Enterprise, a IA roda 100% na sua infraestrutura.",
   },
 ];
 
 export default function Planos() {
+  const [yearly, setYearly] = useState(false);
+
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
-            Planos e Preços
+      {/* Hero - clean, minimal like Claude */}
+      <section className="pt-28 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-primary-900 mb-4 tracking-tight">
+            Planos que crescem com seu negócio
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Escolha o plano ideal para automatizar seu atendimento com inteligência artificial.
-            Todos incluem setup e configuração.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-10">
+            Comece pequeno, escale quando precisar. Todos os planos incluem setup e configuração gratuitos.
           </p>
+
+          {/* Toggle - monthly/yearly */}
+          <div className="inline-flex items-center bg-gray-100 rounded-full p-1">
+            <button
+              onClick={() => setYearly(false)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                !yearly
+                  ? "bg-white text-primary-900 shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              Mensal
+            </button>
+            <button
+              onClick={() => setYearly(true)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                yearly
+                  ? "bg-white text-primary-900 shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              Anual
+              <span className="ml-1.5 text-xs text-green-600 font-semibold">-20%</span>
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <section className="pb-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {plans.map((plan, i) => (
               <AnimateOnScroll key={i}>
                 <div
-                  className={`relative rounded-2xl p-8 flex flex-col h-full ${
+                  className={`relative rounded-2xl flex flex-col h-full transition-all ${
                     plan.highlight
-                      ? "bg-white border-2 border-accent shadow-xl shadow-accent/10 scale-[1.02]"
-                      : "bg-white border border-gray-200 shadow-sm"
+                      ? "bg-primary-900 text-white p-8 shadow-2xl shadow-primary-900/20 ring-1 ring-primary-900"
+                      : "bg-white p-8 border border-gray-200 hover:border-gray-300 hover:shadow-md"
                   }`}
                 >
                   {plan.badge && (
-                    <div className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-sm font-semibold ${
+                    <span className={`inline-block self-start text-xs font-semibold px-3 py-1 rounded-full mb-4 ${
                       plan.highlight
-                        ? "bg-accent text-white"
-                        : "bg-primary-900 text-white"
+                        ? "bg-accent/20 text-accent"
+                        : "bg-primary-900/5 text-primary-900"
                     }`}>
                       {plan.badge}
-                    </div>
+                    </span>
                   )}
 
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-primary-900 mb-2">{plan.name}</h3>
-                    <p className="text-gray-500 text-sm">{plan.description}</p>
-                  </div>
+                  <h3 className={`text-xl font-bold mb-2 ${
+                    plan.highlight ? "text-white" : "text-primary-900"
+                  }`}>
+                    {plan.name}
+                  </h3>
 
+                  <p className={`text-sm mb-6 ${
+                    plan.highlight ? "text-gray-300" : "text-gray-500"
+                  }`}>
+                    {plan.description}
+                  </p>
+
+                  {/* Price */}
                   <div className="mb-8">
-                    <span className="text-4xl font-extrabold text-primary-900">{plan.price}</span>
-                    <span className="text-gray-500">{plan.period}</span>
+                    {plan.monthlyPrice > 0 ? (
+                      <>
+                        <div className="flex items-baseline gap-1">
+                          <span className={`text-4xl font-extrabold tracking-tight ${
+                            plan.highlight ? "text-white" : "text-primary-900"
+                          }`}>
+                            R$ {yearly ? plan.yearlyPrice : plan.monthlyPrice}
+                          </span>
+                          <span className={`text-sm ${
+                            plan.highlight ? "text-gray-400" : "text-gray-500"
+                          }`}>
+                            /mês
+                          </span>
+                        </div>
+                        {yearly && (
+                          <p className={`text-xs mt-1 ${
+                            plan.highlight ? "text-gray-400" : "text-gray-400"
+                          }`}>
+                            Cobrado anualmente (R$ {plan.yearlyPrice * 12}/ano)
+                          </p>
+                        )}
+                      </>
+                    ) : (
+                      <div>
+                        <span className={`text-3xl font-extrabold ${
+                          plan.highlight ? "text-white" : "text-primary-900"
+                        }`}>
+                          Sob consulta
+                        </span>
+                      </div>
+                    )}
                   </div>
 
-                  <ul className="space-y-3 mb-8 flex-1">
-                    {plan.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
-                        <span className="text-gray-700 text-sm">{f}</span>
-                      </li>
-                    ))}
-                    {plan.notIncluded.map((f, j) => (
-                      <li key={`no-${j}`} className="flex items-start gap-3 opacity-40">
-                        <span className="text-gray-400 mt-0.5 flex-shrink-0">✗</span>
-                        <span className="text-gray-500 text-sm">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-
+                  {/* CTA */}
                   <a
                     href={plan.ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block text-center py-3.5 rounded-xl font-semibold transition-all ${
+                    className={`block text-center py-3 rounded-xl font-semibold text-sm transition-all mb-8 ${
                       plan.highlight
-                        ? "bg-accent hover:bg-blue-600 text-white hover:shadow-lg hover:shadow-accent/25"
-                        : "bg-gray-100 hover:bg-gray-200 text-primary-900"
+                        ? "bg-white text-primary-900 hover:bg-gray-100"
+                        : "bg-primary-900 text-white hover:bg-primary-800"
                     }`}
                   >
                     {plan.cta}
                   </a>
+
+                  {/* Features */}
+                  <ul className="space-y-3 flex-1">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <svg
+                          className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                            plan.highlight ? "text-accent" : "text-accent"
+                          }`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className={`text-sm ${
+                          plan.highlight ? "text-gray-200" : "text-gray-600"
+                        }`}>
+                          {f}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </AnimateOnScroll>
             ))}
           </div>
-
-          {/* Trust badges */}
-          <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-gray-500">
-            <div className="flex items-center gap-2">
-              <span>🔒</span> Conformidade LGPD
-            </div>
-            <div className="flex items-center gap-2">
-              <span>⚡</span> Setup em até 5 dias
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🔄</span> Cancele quando quiser
-            </div>
-            <div className="flex items-center gap-2">
-              <span>🇧🇷</span> Suporte em português
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Enterprise highlight */}
-      <section className="py-20">
+      {/* Enterprise banner */}
+      <section className="pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
-            <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-10 md:p-14 text-white">
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-10 md:p-14 border border-gray-200">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                    🔐 IA On-Premise: Seus Dados Nunca Saem da Empresa
-                  </h2>
-                  <p className="text-gray-300 mb-6">
-                    Para empresas que lidam com dados sensíveis — saúde, jurídico, financeiro — oferecemos 
-                    instalação de modelos de IA diretamente na sua infraestrutura. Zero dados enviados para 
-                    servidores externos. Privacidade total.
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xl">🔐</span>
+                    <h2 className="text-2xl font-bold text-primary-900">
+                      IA On-Premise
+                    </h2>
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Para empresas que lidam com dados sensíveis — saúde, jurídico, financeiro. 
+                    Instalamos modelos de IA diretamente na sua infraestrutura. 
+                    Seus dados nunca saem do seu ambiente.
                   </p>
-                  <ul className="space-y-2 text-gray-300 text-sm mb-6">
-                    <li>✓ Modelos de IA rodando nos seus servidores</li>
-                    <li>✓ 100% compatível com LGPD e regulamentações de dados</li>
-                    <li>✓ Performance dedicada, sem limites de uso</li>
-                    <li>✓ Ideal para clínicas, escritórios de advocacia e financeiras</li>
-                  </ul>
-                  <a
-                    href="https://wa.me/5537984149509?text=Olá! Gostaria de saber mais sobre IA on-premise."
-                    className="inline-block bg-white text-primary-900 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-                  >
-                    Saber Mais
-                  </a>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-1.5 text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-600">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                      LGPD Compliant
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-600">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                      Zero dados externos
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 text-xs bg-white border border-gray-200 rounded-full px-3 py-1.5 text-gray-600">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                      Performance dedicada
+                    </span>
+                  </div>
                 </div>
-                <div className="w-32 h-32 md:w-40 md:h-40 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-6xl md:text-7xl">🏢</span>
-                </div>
+                <a
+                  href="https://wa.me/5537984149509?text=Olá! Gostaria de saber mais sobre IA on-premise."
+                  className="flex-shrink-0 bg-primary-900 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-primary-800 transition-colors"
+                >
+                  Falar com Especialista
+                </a>
               </div>
             </div>
           </AnimateOnScroll>
@@ -240,19 +295,17 @@ export default function Planos() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll>
-            <h2 className="text-3xl font-bold text-center text-primary-900 mb-12">
-              Perguntas Frequentes
-            </h2>
-          </AnimateOnScroll>
+      <section className="pb-24">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-center text-primary-900 mb-10">
+            Perguntas Frequentes
+          </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimateOnScroll key={i}>
-                <div className="bg-white rounded-xl border border-gray-200 p-6">
-                  <h3 className="font-semibold text-primary-900 mb-2">{faq.q}</h3>
-                  <p className="text-gray-600 text-sm">{faq.a}</p>
+                <div className="border-b border-gray-100 pb-4">
+                  <h3 className="font-semibold text-primary-900 mb-2 text-sm">{faq.q}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -260,31 +313,24 @@ export default function Planos() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <AnimateOnScroll>
-            <h2 className="text-3xl font-bold text-primary-900 mb-4">
-              Não sabe qual plano escolher?
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              Agende uma conversa gratuita de 15 minutos. Vamos entender seu negócio e recomendar a melhor solução.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/5537984149509?text=Olá! Gostaria de ajuda para escolher o plano ideal."
-                className="bg-accent hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all hover:shadow-lg hover:shadow-accent/25"
-              >
-                Falar pelo WhatsApp
-              </a>
-              <Link
-                href="/contato"
-                className="border border-gray-300 hover:bg-gray-50 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold transition-colors"
-              >
-                Enviar Mensagem
-              </Link>
-            </div>
-          </AnimateOnScroll>
+      {/* Bottom CTA */}
+      <section className="pb-24">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <p className="text-gray-500 mb-4">Não sabe qual plano escolher?</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://wa.me/5537984149509?text=Olá! Gostaria de ajuda para escolher o plano ideal."
+              className="bg-primary-900 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-primary-800 transition-colors text-sm"
+            >
+              Falar com a equipe
+            </a>
+            <Link
+              href="/contato"
+              className="border border-gray-200 hover:bg-gray-50 text-gray-700 px-8 py-3.5 rounded-xl font-semibold transition-colors text-sm"
+            >
+              Enviar mensagem
+            </Link>
+          </div>
         </div>
       </section>
     </>
