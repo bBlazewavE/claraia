@@ -4,7 +4,8 @@ import { post as post3 } from "./chatbots-inteligentes-automatizar-atendimento";
 import { post as post4 } from "./como-ia-reduz-custos-operacionais";
 import { post as post5 } from "./automacao-processos-empresas-brasileiras";
 import { post as post6 } from "./ia-generativa-para-empresas-o-que-muda";
+import { post as post7 } from "./como-automatizar-whatsapp-business-com-ia";
 
-export const posts = [post1, post2, post3, post4, post5, post6].sort(
+export const posts = [post1, post2, post3, post4, post5, post6, post7].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
