@@ -4,7 +4,7 @@ export default function SchemaOrg() {
     "@type": "LocalBusiness",
     name: "ClaraIA",
     description: "Consultoria em Inteligência Artificial e tecnologia para empresas brasileiras. Integração de IA, chatbots inteligentes, MCP e automação de processos.",
-    url: "https://claraia.com.br",
+    url: "https://claraialoja.com.br",
     // telephone: "+5531999999999", // TODO: add real number
     address: {
       "@type": "PostalAddress",

@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     "automação IA",
     "MCP model context protocol",
   ],
-  metadataBase: new URL("https://claraia.com.br"),
+  metadataBase: new URL("https://claraialoja.com.br"),
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://claraia.com.br",
+    url: "https://claraialoja.com.br",
     siteName: "ClaraIA",
     title: "ClaraIA — Consultoria em Inteligência Artificial",
     description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://claraia.com.br",
+    canonical: "https://claraialoja.com.br",
   },
 };
 

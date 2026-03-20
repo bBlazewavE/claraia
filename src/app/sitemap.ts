@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { posts } from "@/content/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://claraia.com.br";
+  const base = "https://claraialoja.com.br";
 
   const pages = [
     { url: base, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1.0 },

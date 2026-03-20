@@ -41,7 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>contato@claraia.com.br</li>
+              <li>contato@claraialoja.com.br</li>
               {/* CNPJ: add when registered */}
             </ul>
           </div>

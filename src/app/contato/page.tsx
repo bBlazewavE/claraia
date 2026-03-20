@@ -142,8 +142,8 @@ export default function Contato() {
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900">E-mail</p>
-                        <a href="mailto:contato@claraia.com.br" className="text-accent hover:underline">
-                          contato@claraia.com.br
+                        <a href="mailto:contato@claraialoja.com.br" className="text-accent hover:underline">
+                          contato@claraialoja.com.br
                         </a>
                       </div>
                     </div>
