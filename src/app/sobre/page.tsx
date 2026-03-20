@@ -53,10 +53,28 @@ export default function Sobre() {
                   nos resultados.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-primary-100 to-blue-50 rounded-2xl aspect-square flex items-center justify-center">
-                <div className="text-center p-8">
-                  <span className="text-8xl block mb-4">🚀</span>
-                  <p className="text-primary-900 font-semibold text-lg">
+              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl aspect-square flex items-center justify-center relative overflow-hidden">
+                {/* Abstract neural network visualization */}
+                <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 400 400">
+                  <circle cx="200" cy="120" r="8" fill="#3b82f6"/>
+                  <circle cx="120" cy="200" r="8" fill="#60a5fa"/>
+                  <circle cx="280" cy="200" r="8" fill="#60a5fa"/>
+                  <circle cx="160" cy="300" r="8" fill="#93c5fd"/>
+                  <circle cx="240" cy="300" r="8" fill="#93c5fd"/>
+                  <circle cx="200" cy="200" r="12" fill="#3b82f6"/>
+                  <line x1="200" y1="120" x2="200" y2="200" stroke="#3b82f6" strokeWidth="1.5"/>
+                  <line x1="120" y1="200" x2="200" y2="200" stroke="#60a5fa" strokeWidth="1.5"/>
+                  <line x1="280" y1="200" x2="200" y2="200" stroke="#60a5fa" strokeWidth="1.5"/>
+                  <line x1="200" y1="200" x2="160" y2="300" stroke="#93c5fd" strokeWidth="1.5"/>
+                  <line x1="200" y1="200" x2="240" y2="300" stroke="#93c5fd" strokeWidth="1.5"/>
+                  <line x1="120" y1="200" x2="160" y2="300" stroke="#93c5fd" strokeWidth="1"/>
+                  <line x1="280" y1="200" x2="240" y2="300" stroke="#93c5fd" strokeWidth="1"/>
+                </svg>
+                <div className="text-center p-8 relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-accent/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-accent text-4xl font-bold">C<span className="text-white">IA</span></span>
+                  </div>
+                  <p className="text-white font-semibold text-lg">
                     Transformando o mercado brasileiro com Inteligência Artificial
                   </p>
                 </div>
