@@ -14,7 +14,7 @@ export default function SchemaOrg() {
     areaServed: "BR",
     priceRange: "$$",
     sameAs: [
-      "https://linkedin.com/company/claraia",
+      "https://linkedin.com/company/claraia-br",
       "https://instagram.com/claraia",
     ],
   };
