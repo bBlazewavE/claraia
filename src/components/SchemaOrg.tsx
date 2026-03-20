@@ -8,7 +8,7 @@ export default function SchemaOrg() {
     telephone: "+5531999999999",
     address: {
       "@type": "PostalAddress",
-      addressRegion: "Minas Gerais",
+      addressRegion: "Brasil",
       addressCountry: "BR",
     },
     areaServed: "BR",

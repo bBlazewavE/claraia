@@ -59,7 +59,7 @@ export default function Sobre() {
                 <div className="text-center p-8">
                   <span className="text-8xl block mb-4">🚀</span>
                   <p className="text-primary-900 font-semibold text-lg">
-                    Transformando o mercado brasileiro com IA desde Minas Gerais
+                    Transformando o mercado brasileiro com Inteligência Artificial
                   </p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Sobre() {
                 regionalismos e nuances culturais.
               </p>
               <p>
-                A ClaraIA entende tudo isso porque vive tudo isso. Estamos em Minas Gerais, atendemos
+                A ClaraIA entende tudo isso porque vive tudo isso. Atendemos
                 em português, cobramos em real e construímos soluções que funcionam para o mercado
                 brasileiro. Simples assim.
               </p>

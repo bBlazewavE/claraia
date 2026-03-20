@@ -41,7 +41,6 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>Minas Gerais, Brasil</li>
               <li>contato@claraia.com.br</li>
               <li>+55 31 99999-9999</li>
               <li className="text-xs text-gray-500 pt-2">CNPJ: 00.000.000/0001-00</li>

@@ -158,24 +158,6 @@ export default function Contato() {
                         </a>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl">📍</span>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">Localização</p>
-                        <p className="text-gray-600">Minas Gerais, Brasil</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Map placeholder */}
-                <div className="bg-gray-200 rounded-xl aspect-video flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <span className="text-4xl block mb-2">🗺️</span>
-                    <p className="text-sm">Google Maps — Minas Gerais, Brasil</p>
-                    <p className="text-xs mt-1">Substitua pelo embed do Google Maps</p>
                   </div>
                 </div>
               </div>
