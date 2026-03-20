@@ -2,7 +2,7 @@ export const post = {
   slug: "5-formas-usar-ia-negocio-2026",
   title: "5 Formas de Usar Inteligência Artificial no Seu Negócio em 2026",
   description: "Descubra como aplicar IA de forma prática na sua empresa em 2026: do atendimento ao cliente à análise preditiva de dados.",
-  date: "2026-03-15",
+  date: "2026-02-20",
   author: "Equipe ClaraIA",
   keywords: ["inteligência artificial negócio", "IA para empresas 2026", "como usar IA empresa", "transformação digital IA"],
   content: `
