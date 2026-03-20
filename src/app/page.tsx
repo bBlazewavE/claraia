@@ -73,10 +73,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contato"
+                href="/contato?assunto=orcamento"
                 className="bg-accent hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:shadow-lg hover:shadow-blue-500/25 text-center"
               >
-                Fale Conosco
+                Solicitar Orçamento
               </Link>
               <Link
                 href="/servicos"

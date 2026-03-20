@@ -38,10 +38,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contato"
+              href="/contato?assunto=orcamento"
               className="bg-accent hover:bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-colors"
             >
-              Fale Conosco
+              Solicitar Orçamento
             </Link>
           </div>
 
@@ -75,11 +75,11 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/contato"
+              href="/contato?assunto=orcamento"
               className="block mt-2 bg-accent text-white text-center px-5 py-2 rounded-lg font-semibold"
               onClick={() => setOpen(false)}
             >
-              Fale Conosco
+              Solicitar Orçamento
             </Link>
           </div>
         )}
