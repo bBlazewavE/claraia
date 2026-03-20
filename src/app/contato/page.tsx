@@ -41,11 +41,20 @@ export default function Contato() {
                 </div>
               ) : (
                 <form
-                  action="https://formspree.io/f/mbdzbzoo"
-                  method="POST"
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    setSubmitted(true);
+                    const form = e.currentTarget;
+                    const data = new FormData(form);
+                    try {
+                      await fetch("https://formspree.io/f/mbdzbzoo", {
+                        method: "POST",
+                        body: data,
+                        headers: { Accept: "application/json" },
+                      });
+                      setSubmitted(true);
+                    } catch {
+                      alert("Erro ao enviar. Tente novamente.");
+                    }
                   }}
                   className="space-y-6"
                 >
